@@ -1,0 +1,55 @@
+<html lang="en-GB">
+
+<head>
+    <title>Xena Events</title>
+    <!--Styling information for this HTML5 page is presented in a separate CSS file-->
+    <link rel="stylesheet" type="text/css" href="styles/assignment-2-style.css" />
+</head>
+
+<body>
+    <div class="header">Xena Events</div>
+    <div class="main-wrap">
+        <div class="ticker_container">
+            <div class="ticker-wrap">
+                <div class="ticker-move">
+                    <div class="ticker-item">Hot Air Balloon Rides</div>
+                    <div class="ticker-item">Dates: 28th March to 5th April 2019.</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <form id="registration" method="post" class="registration">
+                <fieldset>
+                    <label for="Participant">Name:</label>
+                    <input id="participant" type="text" pattern="[A-Za-z ]*" required/>
+                    <label for="Age">Age:</label>
+                    <input id="age" type="text" pattern="[0-9]*"  min="18" max="100" required/>
+                    <label for="Email">Email:</label>
+                    <input name="Email" id="email" type="text" required/>
+                    <label for="City">City:</label>
+                    <input list="City" id="city" required/>
+
+                    <datalist id="City">
+                        <option value="Rajkot">
+                        <option value="Vizag">
+                        <option value="Banglore">
+                    </datalist>
+
+                    <input name="regbutton" type="submit" class="button" value="Register" onclick="myFunction()"/>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function myFunction()   {
+    var x = document.getElementById("registration");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+        } else {
+        x.style.display = "block"; 
+    }
+}
+
+</script>
+</html>
