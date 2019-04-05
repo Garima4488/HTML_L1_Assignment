@@ -1,0 +1,67 @@
+<html lang="en-GB">
+
+<head>
+    <title>Trend NXT assignment for HTML5 L1</title>
+    <!--Styling information for this HTML5 page is presented in a separate CSS file-->
+    <link rel="stylesheet" type="text/css" href="styles/assignment-1-style.css" />
+</head>
+
+<body>
+    <!--Table showing Ticker name and Stock Price for the following stocks-->
+    <table>
+        <tr>
+            <th>TICKER</th>
+            <th>PRICE</th>
+        </tr>
+        <tr>
+            <td>WIPRO</td>
+            <td>298.45</td>
+        </tr>
+        <tr>
+            <td>INFY</td>
+            <td>949.95</td>
+        </tr>
+        <tr>
+            <td>TCS</td>
+            <td>2713.70</td>
+        </tr>
+        <tr>
+            <td>TECHM</td>
+            <td>485.85</td>
+        </tr>
+    </table>
+    <!--Page Heading as directed-->
+    <h1>Stock Trading</h1>
+
+    <!--This form holds the input table-->
+    <form>
+        <table>
+            <tr>
+                <td>Ticker: </td>
+                <!--input creates a text box.-->
+                <!--type: type of data to be entered. name: name of the text box.-->
+                <!--list: a user-defined list of values to be used for input to this text box-->
+                <td><input type="text" name="tickersymbol" list="tickers" required></td>
+            </tr>
+            <tr>
+                <td>Quantity:</td>
+                <!--pattern: defines a regular expression used to constrain values entered into this box-->
+                <!--min: minimum possible value of the box, max: maximum possible value, step: increment step-->
+                <td><input type="number" name="quantity" min="10" max="100" pattern="[0-9]" step="10" required></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+        </table>
+
+        <!-- user-defined list used to select values for the tickers in the input text box-->
+        <datalist id="tickers">
+            <option value="WIPRO">
+            <option value="INFY">
+            <option value="TCS">
+            <option value="TECHM">            
+        </datalist>
+    </form>
+</body>
+
+</html>
